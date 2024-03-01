@@ -3,10 +3,11 @@ import NavContext from "@/context/NavContext";
 import ThemeContext from "@/context/ThemeContext";
 import { IconButton } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
 
 function NavToggle() {
 	const { theme } = useContext(ThemeContext);
-	const { toggleVisible } = useContext(NavContext);
+	const { isVisible, toggleVisible } = useContext(NavContext);
 
 	return (
 		<>
@@ -18,10 +19,11 @@ function NavToggle() {
 					"@media (min-width:768px)": {
 						display: "none",
 					},
+					zIndex: "9999",
 					color: theme === "light" ? "#000" : "#fff",
 				}}
 			>
-				<MenuIcon className="menu-icon" />
+				{isVisible ? <CloseIcon /> : <MenuIcon className="menu-icon" />}
 			</IconButton>
 		</>
 	);
