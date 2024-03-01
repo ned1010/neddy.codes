@@ -8,6 +8,8 @@ import NavContext from "@/context/NavContext";
 
 import DoubleArrowIcon from "@mui/icons-material/DoubleArrow";
 
+import profileImage from "@/assets/profile.jpg";
+
 const Main = () => {
 	const { isMobileView } = useContext(NavContext);
 	// console.log(isMobileView);
@@ -119,7 +121,7 @@ const Main = () => {
 						},
 					}}
 				>
-					<img src="src/assets/profile.JPG" className="home-image" />
+					<img src={profileImage} className="home-image" />
 				</ImageListItem>
 			</Box>
 
