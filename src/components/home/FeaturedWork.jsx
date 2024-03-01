@@ -3,12 +3,11 @@ import featureWorks from "@/data/featuredWork";
 import { Box, Typography } from "@mui/material";
 // import { Link } from "react-router-dom";
 import ThemeContext from "@/context/ThemeContext";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function FeaturedWork() {
 	const { theme } = useContext(ThemeContext);
-	const { id } = useParams();
-	console.log("This is id", id);
+
 
 	return (
 		<Box

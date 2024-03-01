@@ -10,7 +10,7 @@ import DoubleArrowIcon from "@mui/icons-material/DoubleArrow";
 
 const Main = () => {
 	const { isMobileView } = useContext(NavContext);
-	console.log(isMobileView);
+	// console.log(isMobileView);
 	return (
 		<Box
 			className="home__container"

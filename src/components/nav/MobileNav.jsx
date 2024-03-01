@@ -1,13 +1,15 @@
 import { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { Box, Typography } from "@mui/material";
-import ThemeToggle from "../themeToggle";
+
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import WorkOutlineOutlinedIcon from "@mui/icons-material/WorkOutlineOutlined";
 import DescriptionOutlinedIcon from "@mui/icons-material/DescriptionOutlined";
 import ThemeContext from "@/context/ThemeContext";
 import NavContext from "@/context/NavContext";
+
+import ThemeToggle from "@/components/ThemeToggle";
 
 function MobileNav() {
 	const { theme } = useContext(ThemeContext);
