@@ -1,0 +1,346 @@
+/*Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anta&display=swap");
+/*
+General CSS 
+*/
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Changing modes */
+:root {
+	background-image: linear-gradient(rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.5)),
+		url("https://assets-global.website-files.com/64a24a477b774d01d169b819/64a25c6b93ad13ce30aa73d1_background-texture.jpg");
+	--text-color: #000000;
+}
+
+/*Add a data attribute to allow change whole content */
+[data-theme="dark"] {
+	--background-color: #121212;
+	--text-color: #ffffff;
+}
+body {
+	background-color: var(--background-color);
+	color: var(--text-color);
+	overscroll-behavior: none;
+}
+
+#mode-btn:hover {
+	background-color: transparent !important;
+}
+
+/* ==== Nav Bar ==== */
+/*animation is not supported in inline style */
+
+.menu-open {
+	animation: slideIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+	0% {
+		transform: translateX(100%);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+
+.nav-link {
+	width: 100%;
+	padding: 0.5rem 0 0.5rem 20%;
+	position: relative;
+}
+
+.nav-link::before {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	content: "";
+	background: linear-gradient(to right, #ff4d58, #df2189);
+	z-index: -1;
+	transform: scale(0);
+	transition: all 0.3s linear;
+}
+
+.nav-link:hover::before {
+	transform: scale(1);
+}
+
+.mobile-theme {
+	width: 10rem;
+}
+
+/* ==== Creating a pseudo element ==== */
+.home,
+.about,
+.work,
+.resume {
+	position: relative;
+	font-size: "Roboto", sans-serif;
+	font-weight: 500;
+	font-size: 1.2rem;
+}
+
+.home:hover,
+.about:hover {
+	transform: rotate(20deg);
+}
+.work:hover,
+.resume:hover {
+	transform: rotate(-20deg);
+}
+.home::after {
+	content: "Home";
+	position: absolute;
+	top: 120%;
+	left: 50%;
+	transform: translateX(-50%);
+	color: #fff6e9;
+	text-align: center;
+	padding: 10px;
+	font-size: 2rem;
+	border-radius: 0.5rem;
+	background-color: #535c91;
+	opacity: 0;
+}
+.home::before {
+	content: "";
+	position: absolute;
+	top: 125%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(45deg);
+	width: 20px;
+	height: 20px;
+	background-color: #535c91;
+	opacity: 0;
+}
+.home:hover::before,
+.home:hover::after {
+	opacity: 1;
+}
+
+.about::after {
+	content: "About";
+	position: absolute;
+	top: 120%;
+	left: 50%;
+	transform: translateX(-50%);
+	color: #fff6e9;
+	text-align: center;
+	padding: 10px;
+	font-size: 2rem;
+	border-radius: 0.5rem;
+	background-color: #535c91;
+	opacity: 0;
+}
+.about::before {
+	content: "";
+	position: absolute;
+	top: 125%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(45deg);
+	width: 20px;
+	height: 20px;
+	background-color: #535c91;
+	opacity: 0;
+}
+.about:hover::before,
+.about:hover::after {
+	opacity: 1;
+}
+
+.work::after {
+	content: "Work";
+	position: absolute;
+	top: 120%;
+	left: 50%;
+	transform: translateX(-50%);
+	color: #fff6e9;
+	text-align: center;
+	padding: 10px;
+	font-size: 2rem;
+	border-radius: 0.5rem;
+	background-color: #535c91;
+	opacity: 0;
+}
+.work::before {
+	content: "";
+	position: absolute;
+	top: 125%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(45deg);
+	width: 20px;
+	height: 20px;
+	background-color: #535c91;
+	opacity: 0;
+}
+.work:hover::before,
+.work:hover::after {
+	opacity: 1;
+}
+
+.resume::after {
+	content: "Resume";
+	position: absolute;
+	top: 120%;
+	left: 50%;
+	transform: translateX(-50%);
+	color: #fff6e9;
+	text-align: center;
+	padding: 10px;
+	font-size: 2rem;
+	border-radius: 0.5rem;
+	background-color: #535c91;
+	opacity: 0;
+}
+.resume::before {
+	content: "";
+	position: absolute;
+	top: 125%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(45deg);
+	width: 20px;
+	height: 20px;
+	background-color: #535c91;
+	opacity: 0;
+}
+.resume:hover::before,
+.resume:hover::after {
+	opacity: 1;
+}
+/* ==== Home Page ==== */
+.home-image {
+	border-radius: 25% 75% 66% 34% / 64% 46% 65% 36%;
+}
+
+.downward__icon {
+	transform: rotate(90deg); /* Rotate the icon */
+	animation: arrowIcon 1s infinite;
+}
+
+@keyframes arrowIcon {
+	0% {
+		transform: translateY(0) rotate(90deg); /* Include rotation in each keyframe */
+	}
+	50% {
+		transform: translateY(-2rem) rotate(90deg);
+	}
+	100% {
+		transform: translateY(0) rotate(90deg);
+	}
+}
+
+.featured__image {
+	object-fit: cover;
+	width: 100%;
+}
+
+.featured__image:hover {
+	/* border: 2px solid green; */
+	box-shadow: 1x 2px 15px grey;
+	transition: all 0.3s linear;
+	scale: 1.01;
+}
+
+/* ==== Social ==== */
+.social-icon:hover {
+	transform: rotate(-30deg);
+}
+
+/* ==== Footer ==== */
+
+.footer__link {
+	padding: 7px 0;
+	text-decoration: none;
+	width: fit-content;
+}
+.footer__focus,
+.about__reading {
+	font-style: italic;
+	background: linear-gradient(to right, #ff512f, #dd2476);
+	-webkit-background-clip: text; /* For Safari */
+	background-clip: text;
+	color: transparent; /* Hides the text color */
+}
+
+/* ==== About ==== */
+.about__intro__img {
+	width: 5rem;
+	margin-right: 2rem;
+}
+@media (max-width: 768px) {
+	.about__intro__img {
+		width: 3rem;
+		margin-right: 1rem;
+	}
+}
+.about__name {
+	font-family: "Caveat", cursive;
+	border-bottom: 1.5px solid grey;
+	font-weight: 300;
+	font-size: 6rem;
+}
+@media (max-width: 768px) {
+	.about__name {
+		font-size: 4rem;
+		white-space: pre;
+	}
+}
+
+.book__img {
+	width: 100%;
+}
+.book__img:hover {
+	transition: all 0.3s ease;
+	transform: scale(1.1);
+}
+
+.word__style {
+	font-style: italic;
+	font-weight: 900;
+	position: relative;
+	font-family: "Anta", sans-serif;
+}
+
+.animated__mouse {
+	position: absolute;
+	width: 2rem;
+	right: 50%;
+	top: 100%;
+	transform: translate(50%, -50%) rotate(30deg);
+}
+
+@media (max-width: 768px) {
+	.animated__mouse {
+		width: 1.5rem;
+	}
+}
+
+
+
+
+/* ==== Work ==== */
+.work__link {
+	color: #1D24CA;
+	text-decoration: none;
+	cursor: pointer;
+	
+}
+
+.work__link:hover {
+	color: #3652AD
+}
+
+.overview__img, .methods__img, .methods__video {
+	width: 100%;
+	object-fit: cover;
+	margin: 1rem 0;
+}
