@@ -1,6 +1,6 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { NavLink } from "react-router-dom";
-import { Box, IconButton, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import ThemeToggle from "../themeToggle";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
@@ -11,7 +11,7 @@ import NavContext from "@/context/NavContext";
 
 function MobileNav() {
 	const { theme } = useContext(ThemeContext);
-	const { isVisible, toggleVisible } = useContext(NavContext);
+	const { toggleVisible } = useContext(NavContext);
 
 	const iconStyle = {
 		fontSize: "2rem",

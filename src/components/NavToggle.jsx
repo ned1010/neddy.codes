@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
-import NavContext from "../context/NavContext";
-import ThemeContext from "../context/ThemeContext";
+import NavContext from "@/context/NavContext";
+import ThemeContext from "@/context/ThemeContext";
 import { IconButton } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 

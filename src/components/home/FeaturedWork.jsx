@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import featureWorks from "../../data/featuredWork";
+import featureWorks from "@/data/featuredWork";
 import { Box, Typography } from "@mui/material";
 // import { Link } from "react-router-dom";
 import ThemeContext from "@/context/ThemeContext";

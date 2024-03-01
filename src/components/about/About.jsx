@@ -1,4 +1,4 @@
-import Footer from "../footer/Footer";
+import Footer from "@/components/footer/Footer";
 import { Box } from "@mui/material";
 import Intro from "./Intro";
 import Photo from "./Photo";

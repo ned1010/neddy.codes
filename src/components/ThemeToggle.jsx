@@ -1,10 +1,12 @@
 import { useContext } from "react";
-import ThemeContext from "../context/ThemeContext";
 
 import DarkModeSharpIcon from "@mui/icons-material/DarkModeSharp";
 import LightModeSharpIcon from "@mui/icons-material/LightModeSharp";
 import { IconButton } from "@mui/material";
-import NavContext from "../context/NavContext";
+
+import NavContext from "@/context/NavContext";
+import ThemeContext from "@/context/ThemeContext";
+
 const ThemeToggle = () => {
 	const { theme, toggleTheme } = useContext(ThemeContext);
 	// console.log(theme);

@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { Box, Link, Typography } from "@mui/material";
 import { Instagram, YouTube, GitHub, Twitter } from "@mui/icons-material";
-import ThemeContext from "../../context/ThemeContext";
+import ThemeContext from "@/context/ThemeContext";
 
 function Social() {
 	const { theme } = useContext(ThemeContext);
