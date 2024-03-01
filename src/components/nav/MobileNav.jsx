@@ -55,7 +55,7 @@ function MobileNav() {
 					<WorkOutlineOutlinedIcon /> <Typography variant="p">Work</Typography>
 				</Box>
 			</NavLink>
-			<NavLink className="nav-link" to="/resume" onClick={toggleVisible} style={iconStyle}>
+			<NavLink className="nav-link" target="_blank" to={"https://drive.google.com/file/d/1uy59P4Shhy2h90cqPB-J2JdyNPZtDpIX/view"} onClick={toggleVisible} style={iconStyle}>
 				<Box>
 					<DescriptionOutlinedIcon /> <Typography variant="p">Resume</Typography>
 				</Box>
