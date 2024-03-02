@@ -54,7 +54,7 @@ function Social() {
 						}}
 					/>
 				</Link>
-				<Link href="https://www.instagram.com/neddy_98/" target="_blank">
+				<Link href="https://www.instagram.com/nedofalltrades/" target="_blank">
 					{" "}
 					<Instagram
 						className="social-icon"
