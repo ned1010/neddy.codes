@@ -310,36 +310,20 @@ body {
 	font-family: "Anta", sans-serif;
 }
 
-.animated__mouse {
-	position: absolute;
-	width: 2rem;
-	right: 50%;
-	top: 100%;
-	transform: translate(50%, -50%) rotate(30deg);
-}
-
-@media (max-width: 768px) {
-	.animated__mouse {
-		width: 1.5rem;
-	}
-}
-
-
-
-
 /* ==== Work ==== */
 .work__link {
-	color: #1D24CA;
+	color: #1d24ca;
 	text-decoration: none;
 	cursor: pointer;
-	
 }
 
 .work__link:hover {
-	color: #3652AD
+	color: #3652ad;
 }
 
-.overview__img, .methods__img, .methods__video {
+.overview__img,
+.methods__img,
+.methods__video {
 	width: 100%;
 	object-fit: cover;
 	margin: 1rem 0;

@@ -2,6 +2,8 @@ import { Box, Typography } from "@mui/material";
 import bookItems from "@/data/books";
 import { useContext } from "react";
 import ThemeContext from "@/context/ThemeContext";
+import whiteAnimatedGif from "@/assets/animated_mouse.gif";
+import darkAnimatedGif from "@/assets/dark-cursor.gif";
 export default function BookSection() {
 	const { theme } = useContext(ThemeContext);
 	return (
@@ -34,17 +36,7 @@ export default function BookSection() {
 				}}
 			>
 				Books that have had a profound <span className="word__style">impact </span> in my life and
-				continue to{" "}
-				<span className="word__style">
-					influence{" "}
-					<img
-						className="animated__mouse"
-						src={
-							theme === "light" ? "/src/assets/animated_mouse.gif" : "/src/assets/dark-cursor.gif"
-						}
-					/>
-				</span>{" "}
-				me today.
+				continue to <span className="word__style">influence</span> me today.
 			</Typography>
 			<Box
 				sx={{
