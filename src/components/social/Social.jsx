@@ -28,7 +28,7 @@ function Social() {
 					gap: "1rem",
 				}}
 			>
-				<Link href="https://github.com/nidup1010" target="_blank">
+				<Link href="https://github.com/ned1010" target="_blank">
 					{" "}
 					<GitHub
 						className="social-icon"
@@ -68,7 +68,7 @@ function Social() {
 					/>
 				</Link>
 
-				<Link href="https://twitter.com/dorji_98" target="_blank">
+				<Link href="https://twitter.com/nedofalltrades" target="_blank">
 					{" "}
 					<Twitter
 						className="social-icon"
