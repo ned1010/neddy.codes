@@ -116,7 +116,7 @@ function Nav() {
 						</NavLink>
 						<NavLink
 							className="resume"
-							to={"https://drive.google.com/file/d/1-kmcLCETLtDTKSvvJv_D0Grj49X-n8Lw/view?usp=sharing"}
+							to={"https://drive.google.com/file/d/1XcakSO0F8hra1Sj0W4Yc6XewlXQPblu-/view"}
 							target="_blank"
 							style={linkStyle}
 						>

@@ -15,8 +15,7 @@ General CSS
 
 /* Changing modes */
 :root {
-	background-image: linear-gradient(rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.5)),
-		url("https://assets-global.website-files.com/64a24a477b774d01d169b819/64a25c6b93ad13ce30aa73d1_background-texture.jpg");
+	--background-color: #fff;
 	--text-color: #000000;
 }
 
